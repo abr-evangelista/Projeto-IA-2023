@@ -5,8 +5,8 @@ pkg load image
 
 ## Definição do diretório aqui. Deve ser modificado para maior automatização,
 ## para que não seja necessário mudar o código para diretórios diferentes.
-db_dir = "banco_base"
-ia_manipulation_dir "banco_destino"
+db_dir = "banco_base";
+ia_manipulation_dir = "banco_destino";
 
 folder_name = readdir(db_dir);
 
@@ -20,10 +20,18 @@ for i = 3:lin
   if isrgb(face1)
     face1=rgb2gray(face1);
   else
-    B=A;
+    face1 = face1;
   endif
 
+  ##Salvamento de cada nova imagem na pasta destino
+  save([ia_manipulation_dir '\' "image" num2str(i-2) ".mat"], "face1")
+
 endfor
+A = 1
+
+load([ia_manipulation_dir '\' "image1.mat"], "A")
+
+figure, imshow(A)
 
 ##A = imread("test.jpg");
 ##
