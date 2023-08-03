@@ -16,23 +16,30 @@ for i = 3:lin
 
   face1 = imread([db_dir '\' folder_name{i}]);
 
-  ##pre-processamento seria feito aqui pra cada imagem
+  ## pre-processamento seria feito aqui pra cada imagem
   if isrgb(face1)
-    face1=rgb2gray(face1);
+    face1 = rgb2gray(face1);
   else
     face1 = face1;
   endif
 
-  ##Salvamento de cada nova imagem na pasta destino
-  save([ia_manipulation_dir '\' "image" num2str(i-2) ".mat"], "face1")
+  ## Salvamento de cada nova imagem na pasta destino. O format da imagem depende
+  ## do que vc colocar como final da string na linha de imwrite, mas deve ser um
+  ## formato suportado pelo Octave (cheque com o comando imformats no Shell do
+  ## Octave).
+  imwrite(face1, [ia_manipulation_dir '\' "image" num2str(i-2) ".png"]);
 
 endfor
-A = 1
 
-load([ia_manipulation_dir '\' "image1.mat"], "A")
+## Script pra pequeno teste, puxando uma imagem salva do folder de destino e
+## vendo se ela foi salva corretamente e pode ser lida.
+##A = imread([ia_manipulation_dir '\' "image1"]);
+##
+##figure, imshow(A);
 
-figure, imshow(A)
-
+%%%%%%%%%%
+## Aqui, alguns testes estavam sendo feitos pra decidir que tecnicas de
+## pré-processamento usariamos
 ##A = imread("test.jpg");
 ##
 ##figure, imhist(A);
@@ -94,3 +101,4 @@ figure, imshow(A)
 ##D2 = bwmorph(D, 'thin', Inf);
 ##
 ##figure, imshow(D2);
+%%%%%%%%%%
