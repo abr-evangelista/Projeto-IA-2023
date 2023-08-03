@@ -5,8 +5,8 @@ pkg load image
 
 ## Definição do diretório aqui. Deve ser modificado para maior automatização,
 ## para que não seja necessário mudar o código para diretórios diferentes.
-db_dir = "Banco de Imagens"
-ia_manipulation_dir "Banco"
+db_dir = "banco_base"
+ia_manipulation_dir "banco_destino"
 
 folder_name = readdir(db_dir);
 
@@ -22,7 +22,6 @@ for i = 3:lin
   else
     B=A;
   endif
-
 
 endfor
 
