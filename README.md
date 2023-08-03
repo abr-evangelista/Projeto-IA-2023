@@ -1,1 +1,2 @@
 # Projeto-IA-2023
+# Nesse repositório, encontra-se o projeto desenvolvido para a disciplina de Inteligência Artificial em 2023, primeiro semestre. Os integrantes do grupo são Gabriel Evangelista Gonçalves da Silva (abr-evangelista/inukhann), Nicholas Pandelis Papadopoulos Ferreira, Erik Gabriel Rodrigo da Silva, Ariel Sadetsky, Maurício Cawanga Chilombo Kessongo e Vanderlei Guilherme de Assis.
