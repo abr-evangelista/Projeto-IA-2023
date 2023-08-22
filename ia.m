@@ -5,7 +5,7 @@ pkg load image;
 
 ## Definição do diretório aqui. Deve ser modificado para maior automatização,
 ## para que não seja necessário mudar o código para diretórios diferentes.
-db_dir = "banco_base";
+db_dir = "final";
 ia_manipulation_dir = "banco_destino";
 
 folder_name = readdir(db_dir);
