@@ -10,42 +10,28 @@ import {
   useState,
 } from "react"
 
-import { FileType } from "@/app/recognize/page"
-import Webcam from "react-webcam"
+import { ImageType } from "@app/recognize/page"
+import { CAMERA_FLAG, PHOTO_NAME, VIDEO_CONSTRAINTS } from "@constants/camera"
 import { Preview } from "./Preview"
 
+import Webcam from "react-webcam"
+
 interface DropProps {
-  files: FileType[]
-  setFiles: Dispatch<SetStateAction<FileType[]>>
+  image: ImageType
+  setImage: Dispatch<SetStateAction<ImageType>>
 }
 
-export function Drop({ files, setFiles }: DropProps) {
+export function Drop({ image, setImage }: DropProps) {
   const [cameraOpen, setCameraOpen] = useState(false)
-  const [photoSrc, setPhotoSrc] = useState<string | null>(null)
-
-  const webcamRef = useRef<Webcam>(null)
-
-  const videoConstraints = {
-    width: 1280,
-    height: 720,
-    facingMode: "user",
-  }
 
   const dropHandler = useCallback(
     (acceptedFiles: File[]) => {
       if (acceptedFiles.length) {
-        setFiles((previousFiles) => [
-          ...previousFiles,
-          ...acceptedFiles.map((file) =>
-            Object.assign(file, {
-              preview: URL.createObjectURL(file),
-              photoSrc: "",
-            })
-          ),
-        ])
+        const [file] = acceptedFiles
+        setImage(Object.assign(file, { preview: URL.createObjectURL(file) }))
       }
     },
-    [setFiles]
+    [setImage]
   )
 
   const { getRootProps, getInputProps, open } = useDropzone({
@@ -56,50 +42,38 @@ export function Drop({ files, setFiles }: DropProps) {
     onDrop: dropHandler,
   })
 
-  const takePhoto = () => {
-    if (cameraOpen) {
-      capture()
-      setCameraOpen(false)
-    } else {
-      setCameraOpen(true)
-    }
-  }
+  const webcamRef = useRef<Webcam>(null)
+
+  const takePhoto = () => (!cameraOpen ? setCameraOpen(true) : capture())
 
   const capture = useCallback(() => {
     const src = webcamRef.current?.getScreenshot()
-    if (src) {
-      setPhotoSrc(src)
-      setFiles((previousFiles) => [
-        ...previousFiles,
-        Object.assign(new File([], "photo.jpg"), {
-          preview: src,
-          photoSrc: src,
-        }),
-      ])
-    }
-  }, [webcamRef, setFiles])
+    const photoName = PHOTO_NAME
 
-  useEffect(() => {
-    return () => files.forEach((file) => URL.revokeObjectURL(file.preview))
-  }, [files])
+    if (src) setImage(Object.assign(new File([], photoName), { preview: src }))
 
-  const hasFile = files.length > 0
+    setCameraOpen(false)
+  }, [webcamRef, setImage])
+
+  useEffect(() => () => URL.revokeObjectURL(image?.preview ?? ""), [image])
+
+  const isCameraImage = image?.preview.includes(CAMERA_FLAG)
 
   return (
     <div
       className={`flex flex-col items-center gap-4 ${
-        hasFile ? "pb-4 px-2 pt-2" : "p-4"
+        image ? "pb-4 px-2 pt-2" : "p-4"
       } bg-slate-200 max-w-[50%] ${
-        !!!files[0]?.photoSrc && "w-[35%]"
+        !isCameraImage && "w-[35%]"
       } text-rose-950 rounded-xl`}
     >
       <div
         {...getRootProps({ className: "dropzone" })}
         className={`flex flex-col justify-center items-center rounded-lg  ${
-          hasFile ? "w-fit" : "p-5 w-full"
+          image ? "w-fit" : "p-5 w-full"
         } bg-rose-600/20 border-rose-600 border-dashed border-2 text-rose-900`}
       >
-        {files.length === 0 ? (
+        {!image ? (
           <div className="flex flex-col items-center gap-3">
             <ImageIcon className="text-rose-500 w-12 h-12" />
             <input {...getInputProps()} dir="" />
@@ -121,7 +95,7 @@ export function Drop({ files, setFiles }: DropProps) {
             {cameraOpen && (
               <Webcam
                 ref={webcamRef}
-                videoConstraints={videoConstraints}
+                videoConstraints={VIDEO_CONSTRAINTS}
                 screenshotFormat="image/jpeg"
                 audio={false}
                 className="rounded-lg"
@@ -135,12 +109,10 @@ export function Drop({ files, setFiles }: DropProps) {
             </button>
           </div>
         ) : (
-          <Preview file={files[0]} setFiles={setFiles} />
+          <Preview image={image} setImage={setImage} />
         )}
       </div>
-      {files.length > 0 && (
-        <h4 className="text-rose-500 font-medium">{files[0].name}</h4>
-      )}
+      {image && <h4 className="text-rose-500 font-medium">{image?.name}</h4>}
     </div>
   )
 }

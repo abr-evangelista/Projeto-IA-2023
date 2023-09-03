@@ -1,16 +1,18 @@
-import { FileType } from "@/app/recognize/page"
 import { promises as fsPromises } from "fs"
 import { NextResponse } from "next/server"
 import { join } from "path"
+
+import { ImageType } from "@app/recognize/page"
+import { CAMERA_FLAG } from "@constants/camera"
 
 export async function POST(request: Request) {
   try {
     const formData = await request.formData()
 
-    const file: FileType = formData.get("file") as unknown as FileType
-    const photoSrc: string = formData.get("photoSrc") as unknown as string
+    const image: ImageType = formData.get("image") as unknown as ImageType
+    const preview: string = formData.get("preview") as unknown as string
 
-    if (!file) {
+    if (!image) {
       return NextResponse.json({
         success: false,
         error: "Nenhum arquivo foi enviado.",
@@ -19,18 +21,20 @@ export async function POST(request: Request) {
 
     let buffer: Buffer
 
-    if (!!photoSrc) {
-      const base64Data = photoSrc.replace(/^data:image\/\w+;base64,/, "")
+    const isCameraImage = preview.includes(CAMERA_FLAG)
+
+    if (isCameraImage) {
+      const base64Data = preview.replace(/^data:image\/\w+;base64,/, "")
       buffer = Buffer.from(base64Data, "base64")
     } else {
-      const bytes = await file.arrayBuffer()
+      const bytes = await image.arrayBuffer()
       buffer = Buffer.from(bytes)
     }
 
     const uploadsDir = join(process.cwd(), "src", "uploads")
     await fsPromises.mkdir(uploadsDir, { recursive: true })
 
-    const filePath = join(uploadsDir, file.name)
+    const filePath = join(uploadsDir, image.name)
 
     await fsPromises.writeFile(filePath, buffer)
 
