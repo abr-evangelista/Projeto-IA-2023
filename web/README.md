@@ -1,8 +1,8 @@
 Se você deseja testar e executar o site em sua máquina, siga o passo a passo de configuração:
 
-> Se você não tiver instalado o gerenciador de pacote **npm** em sua máquina, instale-o atráves do site oficial do [node](https://nodejs.org/pt-br/download).
+> Se você não tiver instalado o gerenciador de pacote **npm** em sua máquina, instale-o através do site oficial do [node](https://nodejs.org/pt-br/download).
 
-1. Em seu terminal, **acesse a pasta raiz do site `/web`** e execute o seguinte comando para instalar todos os pacotes e dependencias do projeto:
+1. Em seu terminal, **acesse a pasta raiz do site `/web`** e execute o seguinte comando para instalar todos os pacotes e dependências do projeto:
    `npm install`
 
 2. Para rodar o site na sua máquina, execute o comando:
