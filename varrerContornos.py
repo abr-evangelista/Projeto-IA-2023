@@ -22,11 +22,12 @@ def scale_contour(cnt, scale):
 
 fixed_contour_length = 100
 
-for j in range(12,81):
+for j in range(41,81):
     # Load an image
     image_path = f'./banco_destino/image{j}.png'
     image = cv2.imread(image_path)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    #print(j) #Só para não me perder nas imagens
 
     # Find contours in the grayscale image
     contours = cv2.findContours(gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
@@ -81,7 +82,7 @@ for j in range(12,81):
         # Access and process a specific contour by its index (e.g., i)
         cv2.drawContours(image, [contour], -1, (0, 0, 255), 2)  # atual
 
-        cv2.imshow(f'Contorno i: {i}', image)
+        cv2.imshow(f'Contorno i, j: {i, j}', image)
 
         cv2.drawContours(image, [contour], -1, (0, 255, 0), 2)  # passado
 
