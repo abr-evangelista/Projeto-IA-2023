@@ -22,7 +22,7 @@ def scale_contour(cnt, scale):
 
 fixed_contour_length = 100
 
-for j in range(41,81):
+for j in range(85, 89):
     # Load an image
     image_path = f'./banco_destino/image{j}.png'
     image = cv2.imread(image_path)
@@ -51,8 +51,8 @@ for j in range(41,81):
 
 
     # Define minimum and maximum area thresholds for filtering contours
-    min_contour_area = 7  # Adjust this value as needed
-    max_contour_area = 200  # Adjust this value as needed
+    min_contour_area = 5  # Adjust this value as needed
+    max_contour_area = 250  # Adjust this value as needed
 
     # Merge near contours and filter noisy contours
     contours_filtered = []
