@@ -1,0 +1,10 @@
+^C:\USERS\GUISA\ONEDRIVE\DOCUMENTOS\GITHUB\HELP\PROJETO-IA-2023\DLIB-19.24\DLIB\CMAKE_UTILS\TEST_FOR_NEON\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/test_for_neon -BC:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/neon_test_build --check-stamp-file C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/neon_test_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

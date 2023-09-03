@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\guisa\OneDrive\Documentos\GitHub\help\Projeto-IA-2023\dlib-19.24\dlib\cmake_utils\test_for_neon\neon_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\guisa\OneDrive\Documentos\GitHub\help\Projeto-IA-2023\dlib-19.24\dlib\cmake_utils\test_for_neon\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B8E58D79-EB99-3CFA-9693-C692750CD058}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

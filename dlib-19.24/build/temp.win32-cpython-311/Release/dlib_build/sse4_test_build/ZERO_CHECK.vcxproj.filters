@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\guisa\OneDrive\Documentos\GitHub\help\Projeto-IA-2023\dlib-19.24\build\temp.win32-cpython-311\Release\dlib_build\sse4_test_build\CMakeFiles\a2d9e6859cf95b1a9e4b92e9fa872491\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{02E81E5D-210A-3F38-BAEC-00BFDC9A7BBD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

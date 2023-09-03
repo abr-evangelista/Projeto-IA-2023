@@ -1,0 +1,27 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindBLAS.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindCUDA.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindCUDA/select_compute_arch.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindGIF.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/check_if_avx_instructions_executable_on_host.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/check_if_sse4_instructions_executable_on_host.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/find_blas.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/find_libjpeg.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/find_libpng.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/find_libwebp.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/release_build_by_default
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/use_cpp_11.cmake

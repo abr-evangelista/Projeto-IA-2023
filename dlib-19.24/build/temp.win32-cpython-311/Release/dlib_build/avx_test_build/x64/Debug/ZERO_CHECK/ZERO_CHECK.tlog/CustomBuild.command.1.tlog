@@ -1,0 +1,10 @@
+^C:\USERS\GUISA\ONEDRIVE\DOCUMENTOS\GITHUB\HELP\PROJETO-IA-2023\DLIB-19.24\BUILD\TEMP.WIN32-CPYTHON-311\RELEASE\DLIB_BUILD\AVX_TEST_BUILD\CMAKEFILES\4B56302032F7D3AA1ACC664159859FCF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/test_for_avx -BC:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/avx_test_build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/avx_test_build/avx_test.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
