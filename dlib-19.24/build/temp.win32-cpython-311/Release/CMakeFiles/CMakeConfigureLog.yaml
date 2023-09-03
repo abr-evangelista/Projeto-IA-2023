@@ -1,0 +1,834 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:14 (project)"
+    message: |
+      The system is: Windows - 10.0.22000 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:14 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+      Compilação de 03/09/2023 16:01:16 iniciada.
+      
+      Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\3.27.4\\CompilerIdC\\CompilerIdC.vcxproj" no nó 1 (destinos padrão).
+      PrepareForBuild:
+        Criando o diretório "Debug\\".
+        Criando o diretório "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Criando "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+        Tocando "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\3.27.4\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Excluindo o arquivo "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Tocando "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\3.27.4\\CompilerIdC\\CompilerIdC.vcxproj" (destinos padrão).
+      
+      Compilação com êxito.
+          0 Aviso(s)
+          0 Erro(s)
+      
+      Tempo Decorrido 00:00:01.87
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/3.27.4/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:14 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+      Compilação de 03/09/2023 16:01:18 iniciada.
+      
+      Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\3.27.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" no nó 1 (destinos padrão).
+      PrepareForBuild:
+        Criando o diretório "Debug\\".
+        Criando o diretório "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Criando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+        Tocando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\3.27.4\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Excluindo o arquivo "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Tocando "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\3.27.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos padrão).
+      
+      Compilação com êxito.
+          0 Aviso(s)
+          0 Erro(s)
+      
+      Tempo Decorrido 00:00:01.34
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/3.27.4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:14 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-9kw9z3"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-9kw9z3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-9kw9z3'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b95a0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:20 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-9kw9z3\\cmTC_b95a0.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_b95a0.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-9kw9z3\\Debug\\".
+          Criando o diretório "cmTC_b95a0.dir\\Debug\\cmTC_b95a0.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_b95a0.dir\\Debug\\cmTC_b95a0.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_b95a0.dir\\Debug\\cmTC_b95a0.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b95a0.dir\\Debug\\\\" /Fd"cmTC_b95a0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          CMakeCCompilerABI.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b95a0.dir\\Debug\\\\" /Fd"cmTC_b95a0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-9kw9z3\\Debug\\cmTC_b95a0.exe" /INCREMENTAL /ILK:"cmTC_b95a0.dir\\Debug\\cmTC_b95a0.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-9kw9z3/Debug/cmTC_b95a0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-9kw9z3/Debug/cmTC_b95a0.lib" /MACHINE:X64  /machine:x64 cmTC_b95a0.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_b95a0.vcxproj -> C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-9kw9z3\\Debug\\cmTC_b95a0.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_b95a0.dir\\Debug\\cmTC_b95a0.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_b95a0.dir\\Debug\\cmTC_b95a0.tlog\\cmTC_b95a0.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-9kw9z3\\cmTC_b95a0.vcxproj" (destinos padrão).
+        
+        Compilação com êxito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:01.31
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:14 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ak8z1e"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ak8z1e"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ak8z1e'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_93d23.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:22 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ak8z1e\\cmTC_93d23.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_93d23.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ak8z1e\\Debug\\".
+          Criando o diretório "cmTC_93d23.dir\\Debug\\cmTC_93d23.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_93d23.dir\\Debug\\cmTC_93d23.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_93d23.dir\\Debug\\cmTC_93d23.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_93d23.dir\\Debug\\\\" /Fd"cmTC_93d23.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_93d23.dir\\Debug\\\\" /Fd"cmTC_93d23.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ak8z1e\\Debug\\cmTC_93d23.exe" /INCREMENTAL /ILK:"cmTC_93d23.dir\\Debug\\cmTC_93d23.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ak8z1e/Debug/cmTC_93d23.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ak8z1e/Debug/cmTC_93d23.lib" /MACHINE:X64  /machine:x64 cmTC_93d23.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_93d23.vcxproj -> C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ak8z1e\\Debug\\cmTC_93d23.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_93d23.dir\\Debug\\cmTC_93d23.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_93d23.dir\\Debug\\cmTC_93d23.tlog\\cmTC_93d23.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ak8z1e\\cmTC_93d23.vcxproj" (destinos padrão).
+        
+        Compilação com êxito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:01.28
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/check_if_sse4_instructions_executable_on_host.cmake:13 (try_compile)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake:13 (include)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:33 (include)"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/test_for_sse4"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/sse4_test_build"
+    buildResult:
+      variable: "test_for_sse4_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/sse4_test_build'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" ALL_BUILD.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:33 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\sse4_test_build\\ALL_BUILD.vcxproj" no nó 1 (destinos padrão).
+        O projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\sse4_test_build\\ALL_BUILD.vcxproj" (1) está compilando "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\sse4_test_build\\ZERO_CHECK.vcxproj" (2) no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "x64\\Debug\\ZERO_CHECK\\".
+          Criando o diretório "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\".
+        InitializeBuildStatus:
+          Criando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild".
+        CustomBuild:
+          1>Checking Build System
+        FinalizeBuildStatus:
+          Excluindo o arquivo "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild".
+          Tocando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\ZERO_CHECK.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\sse4_test_build\\ZERO_CHECK.vcxproj" (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "x64\\Debug\\ALL_BUILD\\".
+          Criando o diretório "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\".
+        InitializeBuildStatus:
+          Criando "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\unsuccessfulbuild".
+        CustomBuild:
+          Building Custom Rule C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/test_for_sse4/CMakeLists.txt
+        FinalizeBuildStatus:
+          Excluindo o arquivo "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\unsuccessfulbuild".
+          Tocando "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\ALL_BUILD.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\sse4_test_build\\ALL_BUILD.vcxproj" (destinos padrão).
+        
+        Compilação com êxito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:01.23
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/check_if_avx_instructions_executable_on_host.cmake:13 (try_compile)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake:17 (include)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:33 (include)"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/test_for_avx"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/avx_test_build"
+    buildResult:
+      variable: "test_for_avx_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/avx_test_build'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" ALL_BUILD.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:43 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\avx_test_build\\ALL_BUILD.vcxproj" no nó 1 (destinos padrão).
+        O projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\avx_test_build\\ALL_BUILD.vcxproj" (1) está compilando "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\avx_test_build\\ZERO_CHECK.vcxproj" (2) no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "x64\\Debug\\ZERO_CHECK\\".
+          Criando o diretório "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\".
+        InitializeBuildStatus:
+          Criando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild".
+        CustomBuild:
+          1>Checking Build System
+        FinalizeBuildStatus:
+          Excluindo o arquivo "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild".
+          Tocando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\ZERO_CHECK.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\avx_test_build\\ZERO_CHECK.vcxproj" (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "x64\\Debug\\ALL_BUILD\\".
+          Criando o diretório "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\".
+        InitializeBuildStatus:
+          Criando "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\unsuccessfulbuild".
+        CustomBuild:
+          Building Custom Rule C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/test_for_avx/CMakeLists.txt
+        FinalizeBuildStatus:
+          Excluindo o arquivo "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\unsuccessfulbuild".
+          Tocando "x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\ALL_BUILD.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\avx_test_build\\ALL_BUILD.vcxproj" (destinos padrão).
+        
+        Compilação com êxito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:01.26
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/check_if_neon_available.cmake:14 (try_compile)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake:21 (include)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:33 (include)"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/test_for_neon"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/neon_test_build"
+    buildResult:
+      variable: "test_for_neon_worked"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/neon_test_build'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" ALL_BUILD.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:45 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\ALL_BUILD.vcxproj" no nó 1 (destinos padrão).
+        O projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\ALL_BUILD.vcxproj" (1) está compilando "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\ZERO_CHECK.vcxproj" (2) no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "x64\\Debug\\ZERO_CHECK\\".
+          Criando o diretório "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\".
+        InitializeBuildStatus:
+          Criando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild".
+        CustomBuild:
+          1>Checking Build System
+        FinalizeBuildStatus:
+          Excluindo o arquivo "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\unsuccessfulbuild".
+          Tocando "x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\ZERO_CHECK.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\ZERO_CHECK.vcxproj" (destinos padrão).
+        O projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\ALL_BUILD.vcxproj" (1) está compilando "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\neon_test.vcxproj" (3) no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "neon_test.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\Debug\\".
+          Criando o diretório "neon_test.dir\\Debug\\neon_test.tlog\\".
+        InitializeBuildStatus:
+          Criando "neon_test.dir\\Debug\\neon_test.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "neon_test.dir\\Debug\\neon_test.tlog\\unsuccessfulbuild".
+        CustomBuild:
+          Building Custom Rule C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/test_for_neon/CMakeLists.txt
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"neon_test.dir\\Debug\\\\" /Fd"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\Debug\\neon_test.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\dlib\\cmake_utils\\test_for_neon\\neon_test.cpp"
+          neon_test.cpp
+        C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\dlib\\cmake_utils\\test_for_neon\\neon_test.cpp(3,1): fatal  error C1189: #error:  "No NEON" [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\neon_test.vcxproj]
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\neon_test.vcxproj" (destinos padrão) -- FALHA.
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\ALL_BUILD.vcxproj" (destinos padrão) -- FALHA.
+        
+        FALHA da compilação.
+        
+        "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\ALL_BUILD.vcxproj" (destino padrão) (1) ->
+        "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\neon_test.vcxproj" (destino padrão) (3) ->
+        (ClCompile destino) -> 
+          C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\dlib\\cmake_utils\\test_for_neon\\neon_test.cpp(3,1): fatal  error C1189: #error:  "No NEON" [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\dlib_build\\neon_test_build\\neon_test.vcxproj]
+        
+            0 Aviso(s)
+            1 Erro(s)
+        
+        Tempo Decorrido 00:00:01.45
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckTypeSize.cmake:250 (check_include_file)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake:91 (check_type_size)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:33 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-a6i94t"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-a6i94t"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-a6i94t'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_452d5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:47 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-a6i94t\\cmTC_452d5.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_452d5.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-a6i94t\\Debug\\".
+          Criando o diretório "cmTC_452d5.dir\\Debug\\cmTC_452d5.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_452d5.dir\\Debug\\cmTC_452d5.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_452d5.dir\\Debug\\cmTC_452d5.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_452d5.dir\\Debug\\\\" /Fd"cmTC_452d5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-a6i94t\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          CheckIncludeFile.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_452d5.dir\\Debug\\\\" /Fd"cmTC_452d5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-a6i94t\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-a6i94t\\Debug\\cmTC_452d5.exe" /INCREMENTAL /ILK:"cmTC_452d5.dir\\Debug\\cmTC_452d5.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-a6i94t/Debug/cmTC_452d5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-a6i94t/Debug/cmTC_452d5.lib" /MACHINE:X64  /machine:x64 cmTC_452d5.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_452d5.vcxproj -> C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-a6i94t\\Debug\\cmTC_452d5.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_452d5.dir\\Debug\\cmTC_452d5.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_452d5.dir\\Debug\\cmTC_452d5.tlog\\cmTC_452d5.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-a6i94t\\cmTC_452d5.vcxproj" (destinos padrão).
+        
+        Compilação com êxito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:01.26
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake:91 (check_type_size)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:33 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-6yp5lu"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-6yp5lu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-6yp5lu'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7cbf3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:48 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-6yp5lu\\cmTC_7cbf3.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_7cbf3.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-6yp5lu\\Debug\\".
+          Criando o diretório "cmTC_7cbf3.dir\\Debug\\cmTC_7cbf3.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_7cbf3.dir\\Debug\\cmTC_7cbf3.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_7cbf3.dir\\Debug\\cmTC_7cbf3.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7cbf3.dir\\Debug\\\\" /Fd"cmTC_7cbf3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-6yp5lu\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          CheckIncludeFile.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7cbf3.dir\\Debug\\\\" /Fd"cmTC_7cbf3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-6yp5lu\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-6yp5lu\\Debug\\cmTC_7cbf3.exe" /INCREMENTAL /ILK:"cmTC_7cbf3.dir\\Debug\\cmTC_7cbf3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-6yp5lu/Debug/cmTC_7cbf3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-6yp5lu/Debug/cmTC_7cbf3.lib" /MACHINE:X64  /machine:x64 cmTC_7cbf3.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_7cbf3.vcxproj -> C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-6yp5lu\\Debug\\cmTC_7cbf3.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_7cbf3.dir\\Debug\\cmTC_7cbf3.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_7cbf3.dir\\Debug\\cmTC_7cbf3.tlog\\cmTC_7cbf3.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-6yp5lu\\cmTC_7cbf3.vcxproj" (destinos padrão).
+        
+        Compilação com êxito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:01.27
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake:91 (check_type_size)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:33 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ilv0yn"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ilv0yn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ilv0yn'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_21838.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:50 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ilv0yn\\cmTC_21838.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_21838.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ilv0yn\\Debug\\".
+          Criando o diretório "cmTC_21838.dir\\Debug\\cmTC_21838.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_21838.dir\\Debug\\cmTC_21838.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_21838.dir\\Debug\\cmTC_21838.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_21838.dir\\Debug\\\\" /Fd"cmTC_21838.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ilv0yn\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          CheckIncludeFile.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_21838.dir\\Debug\\\\" /Fd"cmTC_21838.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ilv0yn\\CheckIncludeFile.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ilv0yn\\Debug\\cmTC_21838.exe" /INCREMENTAL /ILK:"cmTC_21838.dir\\Debug\\cmTC_21838.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ilv0yn/Debug/cmTC_21838.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-ilv0yn/Debug/cmTC_21838.lib" /MACHINE:X64  /machine:x64 cmTC_21838.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_21838.vcxproj -> C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ilv0yn\\Debug\\cmTC_21838.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_21838.dir\\Debug\\cmTC_21838.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_21838.dir\\Debug\\cmTC_21838.tlog\\cmTC_21838.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-ilv0yn\\cmTC_21838.vcxproj" (destinos padrão).
+        
+        Compilação com êxito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:01.26
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/set_compiler_specific_options.cmake:91 (check_type_size)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:33 (include)"
+    checks:
+      - "Check size of void*"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-qkadvd"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-qkadvd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "HAVE_SIZE_OF_VOID_PTR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-qkadvd'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fa559.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:52 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-qkadvd\\cmTC_fa559.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_fa559.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-qkadvd\\Debug\\".
+          Criando o diretório "cmTC_fa559.dir\\Debug\\cmTC_fa559.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_fa559.dir\\Debug\\cmTC_fa559.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_fa559.dir\\Debug\\cmTC_fa559.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fa559.dir\\Debug\\\\" /Fd"cmTC_fa559.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-qkadvd\\SIZE_OF_VOID_PTR.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          SIZE_OF_VOID_PTR.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fa559.dir\\Debug\\\\" /Fd"cmTC_fa559.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-qkadvd\\SIZE_OF_VOID_PTR.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-qkadvd\\Debug\\cmTC_fa559.exe" /INCREMENTAL /ILK:"cmTC_fa559.dir\\Debug\\cmTC_fa559.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-qkadvd/Debug/cmTC_fa559.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-qkadvd/Debug/cmTC_fa559.lib" /MACHINE:X64  /machine:x64 cmTC_fa559.dir\\Debug\\SIZE_OF_VOID_PTR.obj
+          cmTC_fa559.vcxproj -> C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-qkadvd\\Debug\\cmTC_fa559.exe
+        FinalizeBuildStatus:
+          Excluindo o arquivo "cmTC_fa559.dir\\Debug\\cmTC_fa559.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_fa559.dir\\Debug\\cmTC_fa559.tlog\\cmTC_fa559.lastbuildstate".
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-qkadvd\\cmTC_fa559.vcxproj" (destinos padrão).
+        
+        Compilação com êxito.
+            0 Aviso(s)
+            0 Erro(s)
+        
+        Tempo Decorrido 00:00:01.26
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBLAS.cmake:372 (check_function_exists)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBLAS.cmake:416 (check_blas_libraries)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/find_blas.cmake:431 (find_package)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-7w6mvj"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-7w6mvj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_POSITION_INDEPENDENT_CODE: "True"
+    buildResult:
+      variable: "BLAS_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-7w6mvj'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ff932.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:54 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\cmTC_ff932.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_ff932.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\Debug\\".
+          Criando o diretório "cmTC_ff932.dir\\Debug\\cmTC_ff932.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_ff932.dir\\Debug\\cmTC_ff932.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_ff932.dir\\Debug\\cmTC_ff932.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sgemm_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ff932.dir\\Debug\\\\" /Fd"cmTC_ff932.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          CheckFunctionExists.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sgemm_ /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ff932.dir\\Debug\\\\" /Fd"cmTC_ff932.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\Debug\\cmTC_ff932.exe" /INCREMENTAL /ILK:"cmTC_ff932.dir\\Debug\\cmTC_ff932.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-7w6mvj/Debug/cmTC_ff932.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-7w6mvj/Debug/cmTC_ff932.lib" /MACHINE:X64  /machine:x64 cmTC_ff932.dir\\Debug\\CheckFunctionExists.obj
+        CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, sgemm_, referenciado na função main [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\cmTC_ff932.vcxproj]
+        C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\Debug\\cmTC_ff932.exe : fatal error LNK1120: 1 externo não resolvidos [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\cmTC_ff932.vcxproj]
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\cmTC_ff932.vcxproj" (destinos padrão) -- FALHA.
+        
+        FALHA da compilação.
+        
+        "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\cmTC_ff932.vcxproj" (destino padrão) (1) ->
+        (Link destino) -> 
+          CheckFunctionExists.obj : error LNK2019: símbolo externo não resolvido, sgemm_, referenciado na função main [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\cmTC_ff932.vcxproj]
+          C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\Debug\\cmTC_ff932.exe : fatal error LNK1120: 1 externo não resolvidos [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-7w6mvj\\cmTC_ff932.vcxproj]
+        
+            0 Aviso(s)
+            2 Erro(s)
+        
+        Tempo Decorrido 00:00:01.33
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBLAS.cmake:468 (find_package)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/find_blas.cmake:431 (find_package)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-895poq"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-895poq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_POSITION_INDEPENDENT_CODE: "True"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-895poq'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_25028.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:55 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\cmTC_25028.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_25028.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\Debug\\".
+          Criando o diretório "cmTC_25028.dir\\Debug\\cmTC_25028.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_25028.dir\\Debug\\cmTC_25028.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_25028.dir\\Debug\\cmTC_25028.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_25028.dir\\Debug\\\\" /Fd"cmTC_25028.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          src.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_25028.dir\\Debug\\\\" /Fd"cmTC_25028.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\src.c"
+        C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\src.c(1,10): fatal  error C1083: Não é possível abrir arquivo incluir: 'pthread.h': No such file or directory [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\cmTC_25028.vcxproj]
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\cmTC_25028.vcxproj" (destinos padrão) -- FALHA.
+        
+        FALHA da compilação.
+        
+        "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\cmTC_25028.vcxproj" (destino padrão) (1) ->
+        (ClCompile destino) -> 
+          C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\src.c(1,10): fatal  error C1083: Não é possível abrir arquivo incluir: 'pthread.h': No such file or directory [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-895poq\\cmTC_25028.vcxproj]
+        
+            0 Aviso(s)
+            1 Erro(s)
+        
+        Tempo Decorrido 00:00:01.57
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBLAS.cmake:468 (find_package)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/find_blas.cmake:431 (find_package)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-3w38w6"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-3w38w6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_POSITION_INDEPENDENT_CODE: "True"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-3w38w6'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a1e49.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:01:57 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\cmTC_a1e49.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_a1e49.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\Debug\\".
+          Criando o diretório "cmTC_a1e49.dir\\Debug\\cmTC_a1e49.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_a1e49.dir\\Debug\\cmTC_a1e49.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_a1e49.dir\\Debug\\cmTC_a1e49.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a1e49.dir\\Debug\\\\" /Fd"cmTC_a1e49.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          CheckFunctionExists.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a1e49.dir\\Debug\\\\" /Fd"cmTC_a1e49.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\Debug\\cmTC_a1e49.exe" /INCREMENTAL /ILK:"cmTC_a1e49.dir\\Debug\\cmTC_a1e49.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-3w38w6/Debug/cmTC_a1e49.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-3w38w6/Debug/cmTC_a1e49.lib" /MACHINE:X64  /machine:x64 cmTC_a1e49.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: não é possível abrir o arquivo 'pthreads.lib' [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\cmTC_a1e49.vcxproj]
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\cmTC_a1e49.vcxproj" (destinos padrão) -- FALHA.
+        
+        FALHA da compilação.
+        
+        "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\cmTC_a1e49.vcxproj" (destino padrão) (1) ->
+        (Link destino) -> 
+          LINK : fatal error LNK1104: não é possível abrir o arquivo 'pthreads.lib' [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-3w38w6\\cmTC_a1e49.vcxproj]
+        
+            0 Aviso(s)
+            1 Erro(s)
+        
+        Tempo Decorrido 00:00:01.73
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/FindBLAS.cmake:468 (find_package)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/cmake_utils/find_blas.cmake:431 (find_package)"
+      - "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/dlib/CMakeLists.txt:588 (include)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-min7rd"
+      binary: "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-min7rd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_POSITION_INDEPENDENT_CODE: "True"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-min7rd'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9e123.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Versão do MSBuild 17.7.2+d6990bcfa para .NET Framework
+        Compilação de 03/09/2023 16:02:00 iniciada.
+        
+        Projeto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\cmTC_9e123.vcxproj" no nó 1 (destinos padrão).
+        PrepareForBuild:
+          Criando o diretório "cmTC_9e123.dir\\Debug\\".
+          Criando o diretório "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\Debug\\".
+          Criando o diretório "cmTC_9e123.dir\\Debug\\cmTC_9e123.tlog\\".
+        InitializeBuildStatus:
+          Criando "cmTC_9e123.dir\\Debug\\cmTC_9e123.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_9e123.dir\\Debug\\cmTC_9e123.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9e123.dir\\Debug\\\\" /Fd"cmTC_9e123.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Versão 19.37.32822 para x64
+          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+          CheckFunctionExists.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9e123.dir\\Debug\\\\" /Fd"cmTC_9e123.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\Debug\\cmTC_9e123.exe" /INCREMENTAL /ILK:"cmTC_9e123.dir\\Debug\\cmTC_9e123.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-min7rd/Debug/cmTC_9e123.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/CMakeScratch/TryCompile-min7rd/Debug/cmTC_9e123.lib" /MACHINE:X64  /machine:x64 cmTC_9e123.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: não é possível abrir o arquivo 'pthread.lib' [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\cmTC_9e123.vcxproj]
+        Projeto de compilação pronto "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\cmTC_9e123.vcxproj" (destinos padrão) -- FALHA.
+        
+        FALHA da compilação.
+        
+        "C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\cmTC_9e123.vcxproj" (destino padrão) (1) ->
+        (Link destino) -> 
+          LINK : fatal error LNK1104: não é possível abrir o arquivo 'pthread.lib' [C:\\Users\\guisa\\OneDrive\\Documentos\\GitHub\\help\\Projeto-IA-2023\\dlib-19.24\\build\\temp.win32-cpython-311\\Release\\CMakeFiles\\CMakeScratch\\TryCompile-min7rd\\cmTC_9e123.vcxproj]
+        
+            0 Aviso(s)
+            1 Erro(s)
+        
+        Tempo Decorrido 00:00:01.39
+        
+      exitCode: 1
+...

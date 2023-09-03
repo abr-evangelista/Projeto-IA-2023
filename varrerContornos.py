@@ -22,7 +22,7 @@ def scale_contour(cnt, scale):
 
 fixed_contour_length = 100
 
-for j in range(95,101):
+for j in range(41,81):
     # Load an image
     image_path = f'./banco_destino/image{j}.png'
     image = cv2.imread(image_path)

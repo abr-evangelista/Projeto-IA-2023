@@ -1,0 +1,6 @@
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/_dlib_pybind11.dir
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/ALL_BUILD.dir
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/CMakeFiles/ZERO_CHECK.dir
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/pybind11_build/CMakeFiles/ALL_BUILD.dir
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/CMakeFiles/dlib.dir
+C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/dlib-19.24/build/temp.win32-cpython-311/Release/dlib_build/CMakeFiles/ALL_BUILD.dir

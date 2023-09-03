@@ -3,10 +3,10 @@ clear all;
 clc;
 pkg load image;
 
-## Definição do diretório aqui. Deve ser modificado para maior automatização,
-## para que não seja necessário mudar o código para diretórios diferentes.
-db_dir = "banco_base";
-ia_manipulation_dir = "test1";
+#Definição do diretório aqui. Deve ser modificado para maior automatização,
+#para que não seja necessário mudar o código para diretórios diferentes.
+db_dir = "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_base";
+ia_manipulation_dir = "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_destino";
 
 folder_name = readdir(db_dir);
 
@@ -19,7 +19,7 @@ for count = 3:line
   ## antes de ser usada na função.
   face1 = 0;
 
-  face1 = imread([db_dir '\' folder_name{count}]);
+  face1 = imread([db_dir '/' folder_name{count}]);
 
   ## pre-processamento seria feito aqui pra cada imagem
   if isrgb(face1)
@@ -39,7 +39,7 @@ for count = 3:line
   ## formato suportado pelo Octave (cheque com o comando imformats no Shell do
   ## Octave).
   figure;
-  imwrite(face3, [ia_manipulation_dir '\' "image" num2str(count-2) ".png"]);
+  imwrite(face3, [ia_manipulation_dir '/' "image" num2str(count-2) ".png"]);
   close all;
 
 endfor

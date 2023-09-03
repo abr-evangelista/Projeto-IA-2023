@@ -52,22 +52,22 @@ def move_all_items(src_folder, dest_folder):
     #  Caso contrario retorna False.
     return items_moved == len(items)
 
-def execute_octave(script_path):
+def execute_octave():
     #A função subprocess.run() é usada para executar comandos em um subprocesso.
     #O primeiro argumento para subprocess.run() é uma lista que contém o nome do programa a ser executado e seus argumentos (neste caso, o caminho do script Octave)
     #check=True faz com que um subprocess.CalledProcessError seja levantado se o comando retorna um código diferente de zero (o que geralmente indica um erro).
     try:
-        result = subprocess.run([r'C:\Users\User\AppData\Local\Programs\GNU Octave\Octave-8.2.0\octave', r"--eval", r"run('C:\Users\User\Downloads\SEM05\IA-Katti\Projeto-IA-2023\ia.m')"], shell=True, check=True)
+        result = subprocess.run([r'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/Octave.lnk', r"--eval", r"run('C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/ia.m')"], shell=True, check=True)
         return result.returncode == 0
     except subprocess.CalledProcessError:
-        logging.error(f"Erro ao executar o script Octave: {script_path}")
+        logging.error(f"Erro ao executar o script Octave")
         return False
 
 i = 0
 if __name__ == "__main__":
     operations = [
-        (r'C:/Users/User/Downloads/SEM05/IA-Katti/Projeto-IA-2023/final', r'C:/Users/User/Downloads/SEM05/IA-Katti/Projeto-IA-2023/test1'),
-        (r'C:/Users/User/Downloads/SEM05/IA-Katti/Projeto-IA-2023/test2', r'C:/Users/User/Downloads/SEM05/IA-Katti/Projeto-IA-2023/test3')
+        (r'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/final', r'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_base'),
+        (r'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_destino', r'C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/OpenCV')
         #('/caminho/para/sua/pasta/de/origem2', '/caminho/para/sua/pasta/de/destino2')
     ]
     for src, dest in operations:
@@ -81,9 +81,8 @@ if __name__ == "__main__":
 
             case 1: 
                 #Executa o octave
-                octave_script_path = r"octave --eval 'run('C:\Users\User\Downloads\SEM05\IA-Katti\Projeto-IA-2023\ia.m')'"
-                if execute_octave(octave_script_path):
-                    logging.info(f"Script Octave {octave_script_path} executado com sucesso!")
+                if execute_octave():
+                    logging.info("Script Octave executado com sucesso!")
 
                     # Mova os itens tratados pelo Octave para a pasta de saída
                     if move_all_items(src, dest):
@@ -91,5 +90,5 @@ if __name__ == "__main__":
                     else:
                         logging.error(f"Falha ao mover itens tratados de {src} para {dest}")
                 else:
-                    logging.error(f"Falha ao executar o script Octave {octave_script_path}")
+                    logging.error(f"Falha ao executar o script Octave")
         i += 1
