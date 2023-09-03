@@ -51,8 +51,8 @@ for j in range(95,101):
 
 
     # Define minimum and maximum area thresholds for filtering contours
-    min_contour_area = 7  # Adjust this value as needed
-    max_contour_area = 200  # Adjust this value as needed
+    min_contour_area = 5  # Adjust this value as needed
+    max_contour_area = 250  # Adjust this value as needed
 
     # Merge near contours and filter noisy contours
     contours_filtered = []
