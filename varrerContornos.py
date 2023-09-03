@@ -22,7 +22,7 @@ def scale_contour(cnt, scale):
 
 fixed_contour_length = 100
 
-for j in range(1, 2):
+for j in range(12,81):
     # Load an image
     image_path = f'./banco_destino/image{j}.png'
     image = cv2.imread(image_path)
@@ -51,7 +51,7 @@ for j in range(1, 2):
 
     # Define minimum and maximum area thresholds for filtering contours
     min_contour_area = 7  # Adjust this value as needed
-    max_contour_area = 50  # Adjust this value as needed
+    max_contour_area = 200  # Adjust this value as needed
 
     # Merge near contours and filter noisy contours
     contours_filtered = []
@@ -69,10 +69,13 @@ for j in range(1, 2):
         "guardarContornoBoca": [],
         "guardarContornoNariz": [],
         "guardarContornoOlhoEsquerdo": [],
-        "guardarContornoOlhoDireito": []
+        "guardarContornoOlhoDireito": [],
+        "guardarRuido": []
     }
 
     # Navigate through the specified range of contours
+    exit_flag = -1
+    q_flag = 0
     for i, contour in enumerate(contours_filtered):
         # Access and process a specific contour by its index (e.g., i)
         cv2.drawContours(image, [contour], -1, (0, 0, 255), 2)  # atual
@@ -80,6 +83,10 @@ for j in range(1, 2):
         cv2.imshow(f'Contorno i: {i}', image)
 
         cv2.drawContours(image, [contour], -1, (0, 255, 0), 2)  # passado
+
+        if q_flag == 1:
+            contours_dict["guardarRuido"].append(contour.tolist())  # Convert to list
+            continue
 
         key = cv2.waitKey(0)
 
@@ -92,12 +99,22 @@ for j in range(1, 2):
         elif key == ord('4'):
             contours_dict["guardarContornoOlhoDireito"].append(contour.tolist())  # Convert to list
         elif key == ord('q'):
+            contours_dict["guardarRuido"].append(contour.tolist())  # Convert to list
+            q_flag = 1
+            continue
+        elif key == ord('p'):
+            exit_flag = 1
             break
+        else:
+            contours_dict["guardarRuido"].append(contour.tolist())  # Convert to list
 
     cv2.destroyAllWindows()
 
     with open(f'banco_destino_json/image{j}.json', 'w') as json_file:
         json.dump(im_contours_dict, json_file, indent=2)
     # Salva separadamente o json de labelling
-    with open(f'label/image{j}.json', 'w') as json_file:
+    with open(f'banco_label/image{j}.json', 'w') as json_file:
         json.dump(contours_dict, json_file, indent=2) 
+
+    if exit_flag == 1:
+        break
