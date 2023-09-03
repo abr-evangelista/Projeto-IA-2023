@@ -1,10 +1,11 @@
-import { Header } from "@/components/Header"
 import "../styles/globals.css"
+
+import { Header } from "@components/Header"
 
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], fallback: ["latin"] })
 
 export const metadata: Metadata = {
   title: "IA - Reconhecimento Facial",

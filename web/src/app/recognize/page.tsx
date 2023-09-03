@@ -1,36 +1,26 @@
 "use client"
 
-import { Drop } from "@/components/Drop"
-import { useState } from "react"
-import { ToastContainer, ToastOptions, toast } from "react-toastify"
-
 import "react-toastify/dist/ReactToastify.css"
 
-export type FileType = { preview: string; photoSrc: string } & File
+import { useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
 
+import { Drop } from "@components/Drop"
+import { TOAST_OPTIONS } from "@constants/toast"
+
+export type ImageType = (File & { preview: string }) | null
 export type FileUploadResponse = { success: boolean; path: string }
 
 export default function RecognizePage() {
-  const [files, setFiles] = useState<FileType[]>([])
-
-  const toastOptions: ToastOptions = {
-    position: "bottom-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-  }
+  const [image, setImage] = useState<ImageType>(null)
 
   const submitHandler = async () => {
+    if (!image) return
+
     const formData = new FormData()
 
-    files.forEach((file) => {
-      formData.append("file", file)
-      formData.append("photoSrc", file.photoSrc)
-    })
+    formData.append("image", image)
+    formData.append("preview", image.preview)
 
     const response = await fetch("/api/upload", {
       method: "POST",
@@ -41,22 +31,22 @@ export default function RecognizePage() {
 
     if (success) {
       toast.success(
-        `Upload da imagem ${files[0].name} realizada com sucesso!`,
-        toastOptions
+        `Upload da imagem ${image.name} realizada com sucesso!`,
+        TOAST_OPTIONS
       )
     } else {
       toast.error(
-        `Erro ao realizar upload da imagem ${files[0].name}!`,
-        toastOptions
+        `Erro ao realizar upload da imagem ${image.name}!`,
+        TOAST_OPTIONS
       )
     }
   }
 
   return (
     <main className="pt-24 relative flex flex-col items-center gap-10">
-      <Drop files={files} setFiles={setFiles} />
+      <Drop image={image} setImage={setImage} />
 
-      {files.length > 0 && (
+      {image && (
         <button
           className="px-4 py-3 min-w-[170px] rounded-lg bg-rose-500 text-white text-base font-medium hover:brightness-90 transition-all duration-500"
           onClick={submitHandler}
