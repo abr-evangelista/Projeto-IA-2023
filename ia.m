@@ -5,8 +5,8 @@ pkg load image;
 
 ## Definição do diretório aqui. Deve ser modificado para maior automatização,
 ## para que não seja necessário mudar o código para diretórios diferentes.
-db_dir = "final";
-ia_manipulation_dir = "banco_destino";
+db_dir = "banco_base";
+ia_manipulation_dir = "test1";
 
 folder_name = readdir(db_dir);
 
@@ -40,5 +40,6 @@ for count = 3:line
   ## Octave).
   figure;
   imwrite(face3, [ia_manipulation_dir '\' "image" num2str(count-2) ".png"]);
+  close all;
 
 endfor
