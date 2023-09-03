@@ -70,6 +70,7 @@ for j in range(12,81):
         "guardarContornoNariz": [],
         "guardarContornoOlhoEsquerdo": [],
         "guardarContornoOlhoDireito": [],
+        "guardarRostoCompleto": [],
         "guardarRuido": []
     }
 
@@ -92,12 +93,16 @@ for j in range(12,81):
 
         if key == ord('1'):
             contours_dict["guardarContornoBoca"].append(contour.tolist())  # Convert to list
+            contours_dict["guardarRostoCompleto"].append(contour.tolist())  # Convert to list
         elif key == ord('2'):
             contours_dict["guardarContornoNariz"].append(contour.tolist())  # Convert to list
+            contours_dict["guardarRostoCompleto"].append(contour.tolist())  # Convert to list
         elif key == ord('3'):
             contours_dict["guardarContornoOlhoEsquerdo"].append(contour.tolist())  # Convert to list
+            contours_dict["guardarRostoCompleto"].append(contour.tolist())  # Convert to list
         elif key == ord('4'):
             contours_dict["guardarContornoOlhoDireito"].append(contour.tolist())  # Convert to list
+            contours_dict["guardarRostoCompleto"].append(contour.tolist())  # Convert to list
         elif key == ord('q'):
             contours_dict["guardarRuido"].append(contour.tolist())  # Convert to list
             q_flag = 1
