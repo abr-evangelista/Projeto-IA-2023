@@ -144,24 +144,30 @@ class FaceDetector:
 #5
 ##############################################################################################################################################################################
 #Carrega imagens de um diretório e suas respectivas anotações (coordenadas da boca) a partir de um arquivo JSON.
-def load_data(image_dir, annotations_file):
+def load_data(banco_destino_json_dir, banco_label):
     images = []
     mouth_rects = []
-    image_filenames = [f for f in os.listdir(image_dir) if f.endswith('.jpg')]
+    Lista_json = []
+    image_filenames = [f for f in os.listdir(banco_destino_json_dir) if f.endswith('.json')]
     
-    with open(annotations_file, 'r') as f:
+    #for i in range (len(banco_label)):
+     #   Lista_json = append(i, "")
+    with open(banco_label, 'r') as f:
         filename_to_annotation = json.load(f)
     
     for filename in image_filenames:
-        img_path = os.path.join(image_dir, filename)
+        img_path = os.path.join(banco_destino_json_dir, filename)
         if os.path.exists(img_path):
             img = cv2.imread(img_path)
             images.append(img)
             annotation = filename_to_annotation.get(filename, {})
-            mouth_rects.append((annotation.get("x", 0), 
-                                annotation.get("y", 0),
-                                annotation.get("w", 0),
-                                annotation.get("h", 0)))
+            mouth_rects.append((annotation.get("guardarContornoBoca", 0), 
+                                annotation.get("guardarContornoNariz", 0),
+                                annotation.get("guardarContornoOlhoEsquerdo", 0),
+                                annotation.get("guardarContornoOlhoDireito", 0),
+                                annotation.get("guardarRostoCompleto", 0),
+                                annotation.get("guardarRuido", 0)))
+            
     return images, mouth_rects
 
 #Para cada imagem, ela é pré-processada e as características são extraídas usando o descritor HOG.
@@ -249,12 +255,12 @@ def main():
     detector = FaceDetector()
 
     # Load and train
-    images, mouth_rects = load_data("images", "annotations.json")
+    images, mouth_rects = load_data("C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_destino_json_dir", "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_label/image1.json")
     training_data, labels = extract_features(images, mouth_rects, detector)
     svm = train_svm(training_data, labels)
 
     # Process test image
-    test_image_path = "path_to_your_test_image.jpg"
+    test_image_path = "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/final"
     if os.path.exists(test_image_path):
         test_image = cv2.imread(test_image_path)
         print("SVM Detection:", detector.svm_detection(test_image, svm))
