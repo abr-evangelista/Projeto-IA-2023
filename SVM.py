@@ -144,31 +144,66 @@ class FaceDetector:
 #5
 ##############################################################################################################################################################################
 #Carrega imagens de um diretório e suas respectivas anotações (coordenadas da boca) a partir de um arquivo JSON.
-def load_data(banco_destino_json_dir, banco_label):
+import json.decoder
+
+def load_data(image_dir, annotations_file):
     images = []
     mouth_rects = []
-    Lista_json = []
-    image_filenames = [f for f in os.listdir(banco_destino_json_dir) if f.endswith('.json')]
+    label_json = []
+    image_filenames = [f for f in os.listdir(image_dir) if f.endswith('.jpg')]
     
-    #for i in range (len(banco_label)):
-     #   Lista_json = append(i, "")
-    with open(banco_label, 'r') as f:
-        filename_to_annotation = json.load(f)
+    # Verificar se o diretório possui imagens .jpg
+    if not image_filenames:
+        raise ValueError(f"No .jpg images found in the directory: {image_dir}")
+       
+    label_json = [f for f in os.listdir(annotations_file) if f.endswith('.json')]
     
+    # Verificar se encontramos arquivos .json
+    if not label_json:
+        raise ValueError(f"No .json files found in the directory: {annotations_file}")
+    
+    filename_to_annotation = {}
+    
+    for json_file in label_json:
+        json_path = os.path.join(annotations_file, json_file)
+        
+        # Verificar se o arquivo .json realmente existe
+        if not os.path.exists(json_path):
+            raise ValueError(f"JSON file does not exist: {json_path}")
+        
+        try:
+            with open(json_path, 'r') as f:
+                data = json.load(f)
+                filename_to_annotation.update(data)
+        except json.decoder.JSONDecodeError:
+            raise ValueError(f"Error decoding JSON from file: {json_path}")
+    
+    
+    # Criar um json unificado 
     for filename in image_filenames:
-        img_path = os.path.join(banco_destino_json_dir, filename)
+        img_path = os.path.join(image_dir, filename)
         if os.path.exists(img_path):
             img = cv2.imread(img_path)
-            images.append(img)
-            annotation = filename_to_annotation.get(filename, {})
-            mouth_rects.append((annotation.get("guardarContornoBoca", 0), 
-                                annotation.get("guardarContornoNariz", 0),
-                                annotation.get("guardarContornoOlhoEsquerdo", 0),
-                                annotation.get("guardarContornoOlhoDireito", 0),
-                                annotation.get("guardarRostoCompleto", 0),
-                                annotation.get("guardarRuido", 0)))
+            if img is None:
+                raise ValueError(f"Failed to load image at path: {img_path}")
             
+            images.append(img)
+            
+            annotation = filename_to_annotation.get('guardarContornoBoca', {})
+            print(annotation)
+            
+            if not annotation:
+                raise ValueError(f"No annotation found for image: {filename}")
+            
+            #Juntar/iterar os dados correspondente da boca de cada json-imagem
+            mouth_rects.append((
+                annotation.get("guardarContornoBoca", 0)
+            ))
+            
+    print(f"Loaded {len(images)} images and {len(mouth_rects)} mouth annotations.")
     return images, mouth_rects
+
+
 
 #Para cada imagem, ela é pré-processada e as características são extraídas usando o descritor HOG.
 
@@ -255,7 +290,7 @@ def main():
     detector = FaceDetector()
 
     # Load and train
-    images, mouth_rects = load_data("C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_destino_json_dir", "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_label/image1.json")
+    images, mouth_rects = load_data("C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/final", "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_label")
     training_data, labels = extract_features(images, mouth_rects, detector)
     svm = train_svm(training_data, labels)
 
