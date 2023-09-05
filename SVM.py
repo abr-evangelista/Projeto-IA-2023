@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os
 import json
+import json.decoder
 import dlib
 
 
@@ -83,11 +84,13 @@ class FaceDetector:
             
             #-----------------------------------------------------------
             
-    def svm_detection(self, image, svm):
+    def svm_detection(self, image, svm_x, svm_y):
         gray_image = self.preprocess_image(image)
         h = self.hog.compute(gray_image)
-        _, pred = svm.predict(h.reshape(1, -1))
-        return pred[0]
+        x_pred = svm_x.predict(h.reshape(1, -1))[1][0][0]
+        y_pred = svm_y.predict(h.reshape(1, -1))[1][0][0]
+        return x_pred, y_pred
+
 
 
 ##############################################################################################################################################################################    
@@ -144,64 +147,72 @@ class FaceDetector:
 #5
 ##############################################################################################################################################################################
 #Carrega imagens de um diretório e suas respectivas anotações (coordenadas da boca) a partir de um arquivo JSON.
-import json.decoder
+import os
+import json
+import cv2
 
-def load_data(image_dir, annotations_file):
+def load_data(image_dir: str, json_dir: str) -> (list, list):
     images = []
-    mouth_rects = []
-    label_json = []
-    image_filenames = [f for f in os.listdir(image_dir) if f.endswith('.jpg')]
-    
-    # Verificar se o diretório possui imagens .jpg
-    if not image_filenames:
-        raise ValueError(f"No .jpg images found in the directory: {image_dir}")
-       
-    label_json = [f for f in os.listdir(annotations_file) if f.endswith('.json')]
-    
-    # Verificar se encontramos arquivos .json
-    if not label_json:
-        raise ValueError(f"No .json files found in the directory: {annotations_file}")
-    
-    filename_to_annotation = {}
-    
-    for json_file in label_json:
-        json_path = os.path.join(annotations_file, json_file)
+    mouth_contours = []
+
+    # Lista todos os arquivos de imagem no diretório
+    image_files = [f for f in os.listdir(image_dir) if f.endswith('.png')]
+
+    for img_filename in image_files:
+        base_name, _ = os.path.splitext(img_filename)  # Extrai o nome base da imagem (sem a extensão)
+        json_path = os.path.join(json_dir, base_name + '.json').replace("\\", "/")
         
-        # Verificar se o arquivo .json realmente existe
-        if not os.path.exists(json_path):
-            raise ValueError(f"JSON file does not exist: {json_path}")
-        
+        # Tenta carregar o arquivo JSON com as anotações
         try:
             with open(json_path, 'r') as f:
-                data = json.load(f)
-                filename_to_annotation.update(data)
-        except json.decoder.JSONDecodeError:
-            raise ValueError(f"Error decoding JSON from file: {json_path}")
+                annotation = json.load(f)
+            
+            # Verifica se o arquivo JSON está vazio ou não contém a chave desejada
+            if not annotation or "mouth_centroids" not in annotation or not annotation["mouth_centroids"]:
+                print(f"Arquivo JSON {json_path} está vazio ou não contém anotações de contorno de boca. Pulando.")
+                continue
+
+            # Verifica se os dados são listas de pontos
+            mouth_data = annotation["mouth_centroids"]
+            if not all(isinstance(pt, (list, tuple)) and len(pt) == 2 for pt in mouth_data):
+                print(f"Contorno de boca no arquivo {json_path} não está no formato esperado (x, y). Pulando.")
+                continue
+
+            contour = mouth_data[0]
+            if isinstance(contour, list) and len(contour) == 2:
+                x, y = contour
+
+                if isinstance(x, int) and isinstance(y, int):
+                    mouth_contours.append((x, y))
+                else:
+                    print(f"Tipo de 'contour': {type(contour)}")
+                    print(f"Contorno problemático: {contour}")
+                    print(f"Tipo de 'point x': {type(x)}")
+                    print(f"Tipo de 'point y': {type(y)}")
+                    continue
+            else:
+                print(f"Tipo de 'contour': {type(contour)}")
+                print(f"Contorno problemático: {contour}")
+                continue
+
+        except (IOError, json.JSONDecodeError) as e:
+            print(f"Erro ao carregar o arquivo JSON {json_path}. Detalhes: {e}. Pulando.")
+            continue
+
+        img_path = os.path.join(image_dir, img_filename).replace("\\", "/")
+        img = cv2.imread(img_path)
+
+        # Verifica se o arquivo de imagem está vazio
+        if img is None or img.size == 0:
+            print(f"Erro ao carregar imagem {img_path} ou imagem vazia. Pulando.")
+            continue
+
+        images.append(img)
+
+    print(f"Carregadas {len(images)} imagens e {len(mouth_contours)} anotações de boca.")
     
-    
-    # Criar um json unificado 
-    for filename in image_filenames:
-        img_path = os.path.join(image_dir, filename)
-        if os.path.exists(img_path):
-            img = cv2.imread(img_path)
-            if img is None:
-                raise ValueError(f"Failed to load image at path: {img_path}")
-            
-            images.append(img)
-            
-            annotation = filename_to_annotation.get('guardarContornoBoca', {})
-            print(annotation)
-            
-            if not annotation:
-                raise ValueError(f"No annotation found for image: {filename}")
-            
-            #Juntar/iterar os dados correspondente da boca de cada json-imagem
-            mouth_rects.append((
-                annotation.get("guardarContornoBoca", 0)
-            ))
-            
-    print(f"Loaded {len(images)} images and {len(mouth_rects)} mouth annotations.")
-    return images, mouth_rects
+    return images, mouth_contours
+
 
 
 
@@ -234,17 +245,58 @@ def load_data(image_dir, annotations_file):
     #labels.append(list(rect)): Converte o retângulo da boca (que é uma tupla) para uma lista e a adiciona à lista labels.
     
     #Return...: Converte as listas training_data e labels para arrays numpy de tipo float32 e as retorna.
-def extract_features(images, mouth_rects, detector, winSize=(64, 64)):
+def extract_features(images, mouth_contours, detector, winSize=(64, 64)):
     training_data = []
-    labels = []
+    labels_x = []
+    labels_y = []
 
-    for image, rect in zip(images, mouth_rects):
-        image = detector.preprocess_image(image, winSize)
-        h = detector.hog.compute(image)
-        training_data.append(h)
-        labels.append(list(rect)) 
+    total_contours = 0
+    valid_contours = 0
+    invalid_contours = 0
+    
+    i = 0
+    while i < len(images):
+        total_contours += 1
+        contour = mouth_contours[i]
+        print(f"Tipo de 'contour': {contour}")
 
-    return np.array(training_data, np.float32), np.array(labels, np.float32)
+        # Ajuste na verificação do contorno
+        if isinstance(contour, tuple) and len(contour) == 2 and all(isinstance(coord, (int, float)) for coord in contour):
+            try:
+                image = images[i]
+                image = detector.preprocess_image(image, winSize)
+                h = detector.hog.compute(image)
+                training_data.append(h)
+
+                # Calcula os centroides
+                centroid_x = contour[0]
+                centroid_y = contour[1]
+                valid_contours += 1
+
+                # Adiciona os centroides às listas de rótulos
+                labels_x.append(centroid_x)
+                labels_y.append(centroid_y)
+                i += 1
+                
+            except ValueError as e:
+                print(f"Erro ao extrair características para uma imagem. Detalhes: {e}")
+                # Removendo a imagem e o contorno inválido
+                images.pop(i)
+                mouth_contours.pop(i)
+                invalid_contours += 1
+        else:
+            print("Contorno problemático:", contour)
+            # Removendo a imagem e o contorno inválido
+            images.pop(i)
+            mouth_contours.pop(i)
+            invalid_contours += 1
+
+    print(f"Total de contornos: {total_contours}")
+    print(f"Contornos válidos: {valid_contours}")
+    print(f"Contornos inválidos: {invalid_contours}") 
+    
+    return np.array(training_data, np.float32), np.array(labels_x, np.float32), np.array(labels_y, np.float32)
+
 
 ##############################################################################################################################################################################
 
@@ -274,35 +326,107 @@ def extract_features(images, mouth_rects, detector, winSize=(64, 64)):
             # para encontrar o hiperplano que maximiza a margem entre os vetores de suporte das duas classes. 
             
             #------------------------------------------------------------------
-def train_svm(training_data, labels):
-    svm = cv2.ml.SVM_create()
-    svm.setType(cv2.ml.SVM_C_SVC)
-    svm.setKernel(cv2.ml.SVM_LINEAR)
-    svm.setTermCriteria((cv2.TERM_CRITERIA_MAX_ITER, 100, 1e-6))
-    svm.train(training_data, cv2.ml.ROW_SAMPLE, labels)
-    return svm
+def train_svm(training_data, labels_x, labels_y):
+    try:
+        # Treinar SVM para coordenada x
+        svm_x = cv2.ml.SVM_create()
+        svm_x.setType(cv2.ml.SVM_EPS_SVR)
+        svm_x.setKernel(cv2.ml.SVM_LINEAR)
+        svm_x.setP(0.1)  # Definindo epsilon
+        svm_x.setTermCriteria((cv2.TERM_CRITERIA_MAX_ITER, 100, 1e-6))
+        svm_x.train(training_data, cv2.ml.ROW_SAMPLE, labels_x)
+        
+        # Treinar SVM para coordenada y
+        svm_y = cv2.ml.SVM_create()
+        svm_y.setType(cv2.ml.SVM_EPS_SVR)
+        svm_y.setKernel(cv2.ml.SVM_LINEAR)
+        svm_y.setP(0.1)  # Definindo epsilon
+        svm_y.setTermCriteria((cv2.TERM_CRITERIA_MAX_ITER, 100, 1e-6))
+        svm_y.train(training_data, cv2.ml.ROW_SAMPLE, labels_y)
+        
+        return svm_x, svm_y
+    except ValueError as e:
+        if "setting an array element with a sequence" in str(e):
+            print(f"Erro ao treinar o modelo SVM. Detalhes: {e}")
+            return None, None
+        else:
+            raise e
+
+def check_and_normalize_data(training_data, labels_x, labels_y):
+    # Verificando a forma
+    print("Forma de training_data:", training_data.shape)
+    print("Forma de labels_x:", labels_x.shape)
+    print("Forma de labels_y:", labels_y.shape)
+
+    # Verificando NaN e infinitos
+    print("NaN em training_data:", np.isnan(training_data).sum())
+    print("Infinitos em training_data:", np.isinf(training_data).sum())
+    print("NaN em labels_x:", np.isnan(labels_x).sum())
+    print("Infinitos em labels_x:", np.isinf(labels_x).sum())
+    print("NaN em labels_y:", np.isnan(labels_y).sum())
+    print("Infinitos em labels_y:", np.isinf(labels_y).sum())
+
+    # Verificar a necessidade de normalização usando a diferença entre o valor máximo e mínimo
+    print("Normalizando os dados...")
+    mean = training_data.mean(axis=0)
+    std = training_data.std(axis=0)
+    
+    # Evitar divisão por zero
+    std = np.where(std == 0, 1, std)
+    
+    training_data_normalized = (training_data - mean) / std
+
+    return training_data_normalized, labels_x, labels_y
 
 
 ##############################################################################################################################################################################
-
 
 def main():
     detector = FaceDetector()
 
     # Load and train
-    images, mouth_rects = load_data("C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/final", "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/banco_label")
-    training_data, labels = extract_features(images, mouth_rects, detector)
-    svm = train_svm(training_data, labels)
+    images, contours = load_data("C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/pre_imagem_label", "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/anotacao")
+    if not images or not contours:
+        print("Não foi possível carregar as imagens ou anotações. Encerrando.")
+        return
+   
+    training_data, labels_x, labels_y = extract_features(images, contours, detector)
+    
+    # Verifique se o número de amostras em training_data é igual ao número de rótulos em labels_x e labels_y.
+    assert training_data.shape[0] == labels_x.shape[0] == labels_y.shape[0], "Inconsistência nos tamanhos de dados e rótulos!"
+    
+    # Verificação adicional
+    if not training_data.size:
+        print("Sem dados de treinamento válidos. Encerrando.")
+        return
+    
+    # Check and normalize data
+    training_data, labels_x, labels_y = check_and_normalize_data(training_data, labels_x, labels_y)
+    
+    svm_x, svm_y = train_svm(training_data, labels_x, labels_y)
 
-    # Process test image
-    test_image_path = "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/final"
-    if os.path.exists(test_image_path):
-        test_image = cv2.imread(test_image_path)
-        print("SVM Detection:", detector.svm_detection(test_image, svm))
-        print("Dlib Mouth Coords:", detector.dlib_detection(test_image))
-    else:
-        print(f"Error: {test_image_path} does not exist!")
+    if svm_x is None or svm_y is None:
+        print("Erro ao treinar o SVM. Encerrando.")
+        return
+    
+    # Process test images
+    test_image_dir  = "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/imagem_testes"
+    image_files = [f for f in os.listdir(test_image_dir) if os.path.isfile(os.path.join(test_image_dir, f)) and f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+    
+    for image_file in image_files:
+        image_file_path = os.path.join(test_image_dir, image_file)
 
-
+        if os.path.exists(image_file_path):
+            test_image = cv2.imread(image_file_path)
+            if test_image is not None:
+                x_pred, y_pred = detector.svm_detection(test_image, svm_x, svm_y)
+                print(f"Para a imagem {image_file}:")
+                print("SVM Detection para x:", x_pred)
+                print("SVM Detection para y:", y_pred)
+                print("Dlib Mouth Coords:", detector.dlib_detection(test_image))
+            else:
+                print(f"Erro ao carregar a imagem de teste: {image_file_path}")
+        else:
+            print(f"Erro: {image_file_path} não existe!")
 if __name__ == '__main__':
     main()

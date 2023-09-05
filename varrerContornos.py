@@ -22,9 +22,9 @@ def scale_contour(cnt, scale):
 
 fixed_contour_length = 100
 
-for j in range(41,81):
+for j in range(81,121):
     # Load an image
-    image_path = f'./banco_destino/image{j}.png'
+    image_path = f'./diretoria_pprocessado/image{j}.png'
     image = cv2.imread(image_path)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     #print(j) #Só para não me perder nas imagens
