@@ -4,6 +4,8 @@ import os
 import json
 import json.decoder
 import dlib
+import matplotlib.pyplot as plt
+
 
 
 #Ao criar um objeto desta classe, os detectores de face do Dlib são inicializados. 
@@ -56,8 +58,10 @@ class FaceDetector:
 
     @staticmethod
     # Realiza a pré-processamento da imagem - redimensiona para um tamanho especificado e converte para escala de cinza.
-    def preprocess_image(img, winSize=(64, 64)):
-        return cv2.cvtColor(cv2.resize(img, winSize), cv2.COLOR_BGR2GRAY)
+    def preprocess_image(img, winSize=None):
+        if winSize:
+            img = cv2.resize(img, winSize)
+        return cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 
 ##############################################################################################################################################################################
@@ -85,13 +89,21 @@ class FaceDetector:
             #-----------------------------------------------------------
             
     def svm_detection(self, image, svm_x, svm_y):
-        gray_image = self.preprocess_image(image)
+        # Assegurar que a imagem de teste é redimensionada para o mesmo tamanho de janela
+        winSize = (64, 64)
+        image = cv2.resize(image, winSize)
+        gray_image = self.preprocess_image(image, winSize)
         h = self.hog.compute(gray_image)
+
+        # Print the shape of HOG descriptor
+        print("Shape of HOG descriptor:", h.shape)
+
+        # Ensure the datatype is float32
+        h = h.astype(np.float32)
+        
         x_pred = svm_x.predict(h.reshape(1, -1))[1][0][0]
         y_pred = svm_y.predict(h.reshape(1, -1))[1][0][0]
         return x_pred, y_pred
-
-
 
 ##############################################################################################################################################################################    
 
@@ -133,8 +145,10 @@ class FaceDetector:
     
     
     def dlib_detection(self, image):
-        gray_image = self.preprocess_image(image)
-        detections = self.detector_dlib(gray_image)
+        gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  # Apenas convertendo para escala de cinza, sem redimensionamento.
+        detections = self.detector_dlib(gray_image, 1)  # Adicionando upsample para melhor detecção.
+        if not detections:
+            print("Nenhuma face detectada pela Dlib na imagem.")
         mouth_coords = []
         for detection in detections:
             shape = self.predictor_dlib(gray_image, detection)
@@ -160,7 +174,7 @@ def load_data(image_dir: str, json_dir: str) -> (list, list):
 
     for img_filename in image_files:
         base_name, _ = os.path.splitext(img_filename)  # Extrai o nome base da imagem (sem a extensão)
-        json_path = os.path.join(json_dir, base_name + '.json').replace("\\", "/")
+        json_path = os.path.join(json_dir, base_name + '.json').replace("//", "/")
         
         # Tenta carregar o arquivo JSON com as anotações
         try:
@@ -199,7 +213,7 @@ def load_data(image_dir: str, json_dir: str) -> (list, list):
             print(f"Erro ao carregar o arquivo JSON {json_path}. Detalhes: {e}. Pulando.")
             continue
 
-        img_path = os.path.join(image_dir, img_filename).replace("\\", "/")
+        img_path = os.path.join(image_dir, img_filename).replace("//", "/")
         img = cv2.imread(img_path)
 
         # Verifica se o arquivo de imagem está vazio
@@ -379,13 +393,41 @@ def check_and_normalize_data(training_data, labels_x, labels_y):
     return training_data_normalized, labels_x, labels_y
 
 
+
+def save_and_show_image_with_detections(image_path, image, svm_coords, dlib_coords, save_dir="resultado_SVM"):
+    plt.figure(figsize=(10, 10))
+    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))  # Convertendo a imagem de BGR para RGB
+    plt.scatter([svm_coords[0]], [svm_coords[1]], color='r', s=100, label='SVM Detection')  # Vermelho para detecção SVM
+
+    # Dlib retorna vários pontos em torno da boca. Portanto, vamos pegar a média para ter um único ponto central.
+    if dlib_coords:
+        mean_dlib_coords = (sum(p.x for p in dlib_coords) / len(dlib_coords),
+                            sum(p.y for p in dlib_coords) / len(dlib_coords))
+        plt.scatter([mean_dlib_coords[0]], [mean_dlib_coords[1]], color='g', s=100, label='Dlib Detection')  # Verde para detecção Dlib
+
+    plt.legend()
+
+    # Verificar se o diretório de salvamento existe, senão, criar.
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+    # Montar o caminho completo para salvar a imagem
+    save_path = os.path.join(save_dir, os.path.basename(image_path))
+    plt.savefig(save_path)
+
+    plt.show()  # Adicionado para exibir a imagem plotada
+    plt.close()
 ##############################################################################################################################################################################
 
 def main():
     detector = FaceDetector()
 
     # Load and train
-    images, contours = load_data("C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/pre_imagem_label", "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/anotacao")
+    images, contours = load_data("pre_imagem_label", "anotacao")
+    if not images:
+        print("Lista de imagens está vazia.")
+    if not contours:
+        print("Lista de contornos está vazia.")
     if not images or not contours:
         print("Não foi possível carregar as imagens ou anotações. Encerrando.")
         return
@@ -410,7 +452,7 @@ def main():
         return
     
     # Process test images
-    test_image_dir  = "C:/Users/guisa/OneDrive/Documentos/GitHub/help/Projeto-IA-2023/imagem_testes"
+    test_image_dir  = "diretoria_pprocessado"
     image_files = [f for f in os.listdir(test_image_dir) if os.path.isfile(os.path.join(test_image_dir, f)) and f.lower().endswith(('.png', '.jpg', '.jpeg'))]
     
     for image_file in image_files:
@@ -419,14 +461,23 @@ def main():
         if os.path.exists(image_file_path):
             test_image = cv2.imread(image_file_path)
             if test_image is not None:
+                # Adicionando logs
+                print(f"Processando a imagem: {image_file_path}")
                 x_pred, y_pred = detector.svm_detection(test_image, svm_x, svm_y)
                 print(f"Para a imagem {image_file}:")
                 print("SVM Detection para x:", x_pred)
                 print("SVM Detection para y:", y_pred)
-                print("Dlib Mouth Coords:", detector.dlib_detection(test_image))
+                dlib_results = detector.dlib_detection(test_image)
+                if dlib_results:
+                    print("Dlib Mouth Coords:", dlib_results)
+                    save_and_show_image_with_detections(image_file_path, test_image, (x_pred, y_pred), dlib_results[0])
+                else:
+                    print("Dlib não detectou marcos faciais para esta imagem.")
             else:
                 print(f"Erro ao carregar a imagem de teste: {image_file_path}")
         else:
             print(f"Erro: {image_file_path} não existe!")
+    
+    
 if __name__ == '__main__':
     main()
