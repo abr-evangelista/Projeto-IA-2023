@@ -10,11 +10,17 @@ interface PreviewProps {
 }
 
 export function Preview({ image, setImage }: PreviewProps) {
+  const removeImage = async () => {
+    setImage(null)
+
+    location.reload()
+  }
+
   return (
     <div className="relative flex flex-col justify-center items-center h-full">
       <button
         className="p-2 bg-rose-500 rounded-full absolute -top-4 -right-4 hover:bg-rose-500/80 transition-all duration-500"
-        onClick={() => setImage(null)}
+        onClick={() => removeImage()}
       >
         <X className="text-white w-6 h-6" />
       </button>

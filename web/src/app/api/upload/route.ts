@@ -1,6 +1,8 @@
 import { promises as fsPromises } from "fs"
 import { NextResponse } from "next/server"
-import { join } from "path"
+import path, { join } from "path"
+
+import cp from "child_process"
 
 import { ImageType } from "@app/recognize/page"
 import { CAMERA_FLAG } from "@constants/camera"
@@ -34,9 +36,18 @@ export async function POST(request: Request) {
     const uploadsDir = join(process.cwd(), "src", "uploads")
     await fsPromises.mkdir(uploadsDir, { recursive: true })
 
-    const filePath = join(uploadsDir, image.name)
+    const filePath = join(uploadsDir, "photo.png")
 
     await fsPromises.writeFile(filePath, buffer)
+
+    const pythonFile = path.join(
+      process.cwd(),
+      "src",
+      "scripts",
+      "reconhecer.py"
+    )
+
+    cp.spawn("python3", [pythonFile])
 
     return NextResponse.json({ success: true, path: filePath })
   } catch (error) {
